@@ -1,0 +1,34 @@
+/* tweacker */
+.form-label{
+    margin-bottom: .1rem !important;
+}
+
+
+/* badges */
+.badge-normal{ color: #333; }
+.badge-storno{ color: #333; background-color: #f6f6f6 !important; }
+.badge-cancelled{ color: #333; background-color: #ff979722 !important; }
+
+/* AUTOCOMPLETE */
+.client-name-field{ position: relative; }
+.client-name-suggestion{
+    position: absolute;
+    top: 60px;
+    background-color: #fff;
+    min-width: 100%;
+    box-shadow: 0 0 15px -5px rgba(0,0,0, 0.25);
+    border-radius: 7px;
+    border: 0.5px solid #ddd;
+    padding: 5px;
+    z-index: 10000;
+}
+.client-name-suggestion .item{
+    cursor: pointer;
+    display: flex;
+    min-width: 100%;
+    padding: 3px 6px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.client-name-suggestion .item:hover{ background-color: rgb(232, 232, 232); }

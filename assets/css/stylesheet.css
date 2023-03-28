@@ -1,0 +1,115 @@
+
+body{
+    background-color: #f1f1f1;
+    min-height: 100vh;
+}
+*{ font-size: 15px !important; }
+h1{ font-size: 20px !important; }
+
+:root{
+    --primary-color: #fdcf74;
+    --primary-color-soft: rgba(253, 207, 116, 0.4);
+}
+
+
+/* Override `.row` Bootstrap class */
+.row{
+    margin-right: 0 !important;
+    margin-left:  0 !important;
+}
+
+.navbar{
+    background-color: var(--primary-color) !important;
+}
+.navbar .nav-link.active{
+    text-decoration: underline;
+}
+
+#universal-search{
+    background-color: #e6bc68;
+    border-color: #543a052e;
+}
+#universal-search::placeholder{
+    color: #987838;
+}
+
+.page-title{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+.page-title .title span{
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px !important;
+}
+
+.page-content{
+    margin-left: auto;
+    margin-right: auto;
+}
+.small-text{ font-size: 12px !important; } 
+
+/* TABLE */
+.table tbody tr:hover > td{ background-color: var(--primary-color); }
+.table tbody tr td:first-of-type{ 
+    border-left-style: solid;
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+}
+.table tbody tr td:last-of-type{ 
+    border-left-style: solid;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+.table tr td{ vertical-align: middle; }
+
+
+/* Table details pop-up */
+.table-details{ position: relative !important; }
+.table-details-expanded{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left:0;
+    box-shadow: 0 0 15px -5px rgba(0,0,0, 0.2);   
+    z-index: 10000 !important;
+}
+.table-details .expand-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-details .table-details-btn:hover > .expand-icon{ opacity: 1; }
+.table-details-expanded .info{
+    max-width: 480px;
+    min-width: 250px;
+}
+
+/* NOTIFICATION */
+.notification{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+.notification .alert{ box-shadow: 0 5px 15px -5px rgba(0,0,0, 0.25); }
+
+/* PAGINATION */
+.pagination .page-link{color:#000;}
+.pagination .page-item.disabled .page-link{ color:rgb(135, 135, 135); }
+.pagination .page-item.active .page-link{ 
+    background-color: #fdcf74; 
+    border: 0.5px solid rgb(164, 164, 164);
+}
